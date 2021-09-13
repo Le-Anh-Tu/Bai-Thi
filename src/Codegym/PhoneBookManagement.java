@@ -63,4 +63,14 @@ public class PhoneBookManagement {
         }
         return index;
     }
+    public int finByPhoneNumber(String phoneNumber) {
+        int index = -1;
+        for (int i = 0; i < phoneBooks.size(); i++) {
+            if (phoneBooks.get(i).getPhoneNumber().equals(phoneNumber)) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
 }

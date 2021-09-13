@@ -97,12 +97,12 @@ public class MenuPhoneBook {
     private void searhPhoneBook() {
         System.out.print("Nhập vào số điện thoại hoặc họ tên để tìm kiếm trong danh bạ: ");
         String check = scanner.nextLine();
-        int indexPhone = phoneBookManagement.finById(check);
+        int indexPhone = phoneBookManagement.finByPhoneNumber(check);
         int indexName = phoneBookManagement.finByName(check);
-        if (indexName != 1) {
+        if (indexName != -1) {
             System.out.println("liên hệ mà bạn cần tìm");
             System.out.println(phoneBookManagement.getPhoneBooks().get(indexName));
-        }else if (indexPhone != 1){
+        }else if (indexPhone != -1){
             System.out.println("liên hệ mà bạn cần tìm");
             System.out.println(phoneBookManagement.getPhoneBooks().get(indexPhone));
         }else {
